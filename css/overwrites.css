@@ -9,3 +9,8 @@
 .less-margin-top {
 	margin-top:0px;
 }
+
+input[type="radio"],
+input[type="checkbox"] {
+
+}

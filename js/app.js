@@ -1,11 +1,9 @@
-
-  
-	$(document).ready(function(){
+$(document).ready(function(){
 	
 	// Setup form validation on the #survey-form element
     $("#survey-form").validate({
     
-		// Surepress error message and highlight form element
+		// Surpress error messages and highlight form element
 		highlight: function(element) {
 			$(element).closest('.form-group').addClass('has-error');
 		},
@@ -21,24 +19,15 @@
             question3OptionsRadios: "required",
             nameInput: "required",
         },
-        
-        // Specify the validation error messages
-        messages: {
-            question1OptionsRadios: "Bitte wählen Sie eine Option aus.",
-            question2OptionsRadios: "Bitte wählen Sie eine Option aus.",
-            question3OptionsRadios: "Bitte wählen Sie eine Option aus.",
-            nameInput: "Bitte geben Sie Ihren Namen oder Ihr Pseudonym ein.",
-        },
-    });	
-		
-	});  
+    });	 
 	
+	// Select radio button in case of clicking inside 'other' input field
 	$("#other").click(function() {
 		$("#question3Option8").prop('checked',true);
 	});
 	
-	$(".send2parse").click(function() {
-	
+	// Writing to parse.com
+	$(".send2parse").click(function( event ) {
 		event.preventDefault();
 		
 		if ($('#survey-form').valid()) {
@@ -77,4 +66,5 @@
 		}
 		
 	});
+}); 
 	    
