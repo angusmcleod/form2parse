@@ -1,2 +1,2 @@
 # form2parse
-Simple survey for ZON Geld
+Simple survey form saving data at parse.com
