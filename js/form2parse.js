@@ -23,7 +23,7 @@ $(document).ready(function(){
 	
 	// Select radio button in case of clicking inside 'other' input field - change if you're adding more options
 	$("#other").click(function() {
-		$("#question3Option4").prop('checked',true);
+		$("#question1Option4").prop('checked',true);
 	});
 	
 	// parse.com stuff
