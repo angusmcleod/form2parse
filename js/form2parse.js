@@ -35,17 +35,17 @@ $(document).ready(function(){
 			// Changing button status
 			$(".send2parse").html('Submitting...');
 			
-			// initalize
+			// Initalize
 
-			// don't forget to restrict your data class at parse.com to create -> https://parse.com/docs/data#security
-			// if not everybody can get your collected data via the JavaScriptKey
+			// Don't forget to restrict your data class at parse.com to create -> https://parse.com/docs/data#security
+			// If not everybody can get your collected data via the JavaScriptKey
 			Parse.initialize("[yourApplicationId]", "[yourJavaScriptKey]");
 			
-			// new object
+			// New object
 			var answer = Parse.Object.extend("answer");
 			var answer = new answer();
 			
-			// mapping form data
+			// Mapping form data
 			var question1 = $("input:radio[name=question1OptionsRadios]:checked").val();
 			var other = $("#other").val();
 			var text = $("#textInput").val();
@@ -57,7 +57,7 @@ $(document).ready(function(){
 			answer.set("text", text);
 			answer.set("name", name);
 			answer.set("email", email);
-			// saving
+			// Saving
 			answer.save(null, {
 			  success: function(answer) {
 				$('button').prop('disabled', true);
