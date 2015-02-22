@@ -5,188 +5,90 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="HandheldFriendly" content="True">
-
 	<title>form2parse</title>
-
 	<link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap-theme.min.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="./css/overwrites.css" />
 </head>
 <body>
 
+	<div class="container custom-margin-top">
+		<div class="panel panel-default">
+		  	<div class="panel-body">
+			<h2 class="less-margin-top">Headline</h2>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 
-<div class="container custom-margin-top">
+			<form id="survey-form">
 
-<div class="panel panel-default">
-  	<div class="panel-body">
+				<!-- Question 1
+		  		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-	<h2 class="less-margin-top">Geldfragen gesucht</h2>
-	<p>Banken, die keine Zinsen mehr zahlen; Makler, die Mondpreise verlangen; ein boomender Aktienmarkt und ein schwacher Euro; Deflationsgefahr und Inflationsangst: Wer Vermögen oder Schulden hat wird sich 2015 viele Geldfragen stellen. Wir möchten wissen, welche Sie besonders beschäftigen.</p>
+		  		<div class="form-group">
+			  		<p><strong>Lorem ipsum dolor sit amet?</strong></p>
 
-	<form id="survey-form">
+					<div class="radio">
+						<label>
+							<input type="radio" name="question1OptionsRadios" id="question1Option1" value="option1">
+							Lorem
+						</label>
+					</div>
+					
+					<div class="radio">
+						<label>
+							<input type="radio" name="question1OptionsRadios" id="question1Option2" value="option2">
+							ipsum
+						</label>
+					</div>
+					
+					<div class="radio">
+						<label>
+							<input type="radio" name="question1OptionsRadios" id="question1Option3" value="option3">
+							dolor
+						</label>
+					</div>
 
-		<!-- Question 1
-  		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+					<div class="radio">
+						<label>
+							<input type="radio" name="question1OptionsRadios" id="question1Option4" value="option4">
+							<input type="text" class="form-control" name ="other" id="other" placeholder="Other">
+						</label>
+					</div>
+				</div>
 
-  		<div class="form-group">
-			<p><strong>Haben Sie den Eindruck, dass Sie häufiger über Geld und Geldanlage nachdenken und sprechen als noch vor einem Jahr?</strong></p>
+				<!-- Text
+		  		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-			<div class="radio">
-				<label>
-					<input type="radio" name="question1OptionsRadios" id="question1Option1" value="option1">
-					Das Thema ist für mich wichtiger geworden
-				</label>
-			</div>
-			
-			<div class="radio">
-				<label>
-					<input type="radio" name="question1OptionsRadios" id="question1Option2" value="option2">
-					Das Thema ist in etwa gleich wichtig geblieben
-				</label>
-			</div>
-			
-			<div class="radio">
-				<label>
-					<input type="radio" name="question1OptionsRadios" id="question1Option3" value="option3">
-					Das Thema ist mir weniger wichtig
-				</label>
-			</div>
+				<div class="form-group">
+					<label for="textInput">Lorem ipsum dolor sit amet?</label>
+					<textarea class="form-control" rows="5" id="textInput" placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."></textarea>
 
-			<div class="radio">
-				<label>
-					<input type="radio" name="question1OptionsRadios" id="question1Option4" value="option4">
-					Keine Meinung
-				</label>
-			</div>
-		</div>
+				</div>
 
-		<!-- Question 2
-  		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<!-- Name & E-Mail
+		  		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-		<div class="form-group">
-	  		<p><strong>Haben Sie Ihre Art und Weise, wie Sie mit Ihrem Geld und Ersparten umgehen, in den vergangenen Monaten verändert?</strong></p>
+				<div class="form-group">
+					<label for="nameInput">Name</label>
+					<input type="text" class="form-control" id="nameInput" name="nameInput" placeholder="Your Name">
+				</div>
 
-			<div class="radio">
-				<label>
-					<input type="radio" name="question2OptionsRadios" id="question2Option1" value="option1">
-					Nein
-				</label>
-			</div>
-			
-			<div class="radio">
-				<label>
-					<input type="radio" name="question2OptionsRadios" id="question2Option2" value="option2">
-					Ja, ich gehe mehr Risiken ein
-				</label>
-			</div>
-			
-			<div class="radio">
-				<label>
-					<input type="radio" name="question2OptionsRadios" id="question2Option3" value="option3">
-					Ja, ich gehe weniger Risiken ein
-				</label>
-			</div>
-		</div>
+				<div class="form-group">
+					<label for="emailInput">E-Mail</label>
+					<input type="email" class="form-control" id="emailInput" placeholder="Your E-Mail">
+				</div>
+				
+				<!-- Submit
+		  		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-		<!-- Question 3
-  		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-  		<div class="form-group">
-	  		<p><strong>Wenn Sie 10.000 Euro geschenkt bekommen würden, wie würden Sie das Geld jetzt vor allem anlegen?</strong></p>
-
-			<div class="radio">
-				<label>
-					<input type="radio" name="question3OptionsRadios" id="question3Option1" value="option1">
-					Bar in den Tresor legen
-				</label>
-			</div>
-			
-			<div class="radio">
-				<label>
-					<input type="radio" name="question3OptionsRadios" id="question3Option2" value="option2">
-					Auf ein Sparbuch / Tagegeldkonto einzahlen
-				</label>
-			</div>
-			
-			<div class="radio">
-				<label>
-					<input type="radio" name="question3OptionsRadios" id="question3Option3" value="option3">
-					In Aktien investieren
-				</label>
-			</div>
-
-			<div class="radio">
-				<label>
-					<input type="radio" name="question3OptionsRadios" id="question3Option4" value="option4">
-					In Fonds investieren
-				</label>
-			</div>
-
-			<div class="radio">
-				<label>
-					<input type="radio" name="question3OptionsRadios" id="question3Option5" value="option5">
-					Gold kaufen und in den Tresor legen
-				</label>
-			</div>
-
-			<div class="radio">
-				<label>
-					<input type="radio" name="question3OptionsRadios" id="question3Option6" value="option6">
-					In Devisen anlegen
-				</label>
-			</div>
-
-			<div class="radio">
-				<label>
-					<input type="radio" name="question3OptionsRadios" id="question3Option7" value="option7">
-					Schulden tilgen
-				</label>
-			</div>
-
-			<div class="radio">
-				<label>
-					<input type="radio" name="question3OptionsRadios" id="question3Option8" value="option8">
-					<input type="text" class="form-control" name ="other" id="other" placeholder="Sonstiges">
-				</label>
+				<button type="submit" class="btn btn-default send2parse">Submit</button>
+			</form>
 			</div>
 		</div>
-
-		<!-- Text
-  		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-		<div class="form-group">
-			<label for="textInput">Wie hat sich Ihr Umgang mit Geld in den vergangenen Monaten verändert?</label>
-			<textarea class="form-control" rows="5" id="textInput" placeholder="Was bedeutet es für Sie, wenn es um Nullzins und Deflation geht oder wenn von Immobilienblase und Aktienhausse die Rede ist? Welche Anlageformen bereiten Ihnen Kopfzerbrechen? Welche Sorgen haben Sie?"></textarea>
-
-		</div>
-
-		<!-- Name & E-Mail
-  		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-		<div class="form-group">
-			<label for="nameInput">Name</label>
-			<input type="text" class="form-control" id="nameInput" name="nameInput" placeholder="Ihr Name oder Pseudonym">
-		</div>
-
-		<div class="form-group">
-			<label for="emailInput">E-Mail</label>
-			<input type="email" class="form-control" id="emailInput" placeholder="Falls wir Sie für redaktionelle Nachfragen kontaktieren dürfen - sonst freilassen">
-		</div>
-		
-		<!-- Submit
-  		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-		<button type="submit" class="btn btn-default send2parse">Absenden</button>
-	</form>
 	</div>
-
-</div>
-</div>
 	
 	<script type="text/javascript" src="http:///code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
-	<script type="text/javascript" src="./js/app.js"></script>
-
+	<script type="text/javascript" src="./js/form2parse.js"></script>
 </body>
 </html>

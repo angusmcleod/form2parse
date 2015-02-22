@@ -12,7 +12,7 @@ $(document).ready(function(){
 		},
 		errorPlacement: function(error, element) {},
 
-        // Specify the validation rules
+        // Specify validation rules – advanced rules here http://jqueryvalidation.org/documentation/
         rules: {
             question1OptionsRadios: "required",
             question2OptionsRadios: "required",
@@ -21,50 +21,46 @@ $(document).ready(function(){
         },
     });	 
 	
-	// Select radio button in case of clicking inside 'other' input field
+	// Select radio button in case of clicking inside 'other' input field - change if you're adding more options
 	$("#other").click(function() {
-		$("#question3Option8").prop('checked',true);
+		$("#question3Option4").prop('checked',true);
 	});
 	
-	// Writing to parse.com
+	// parse.com stuff
 	$(".send2parse").click(function( event ) {
 		event.preventDefault();
-		
-		if ($('#survey-form').valid()) {
 
-			Parse.initialize("9cI8aX0fHP6WmsXx28n0EvJzS4hCfMHNuHvKPUnG", "XPnX9Lx7SAAMGy8K2Fq0ZsEFwoJLm3IYku6IGD53");
-			
+		if ($('#survey-form').valid()) {
+			// Changing button status
+			$(".send2parse").html('Submitting...');
+			// initalize
+			Parse.initialize("[yourApplicationId]", "[yourJavaScriptKey]");
+			// new object
 			var answer = Parse.Object.extend("answer");
 			var answer = new answer();
-
+			// mapping form data
 			var question1 = $("input:radio[name=question1OptionsRadios]:checked").val();
-			var question2 = $("input:radio[name=question2OptionsRadios]:checked").val();
-			var question3 = $("input:radio[name=question3OptionsRadios]:checked").val();
 			var other = $("#other").val();
 			var text = $("#textInput").val();
 			var name = $("#nameInput").val();
 			var email = $("#emailInput").val();
-		
+			
 			answer.set("question1", question1);
-			answer.set("question2", question2);
-			answer.set("question3", question3);
 			answer.set("other", other);
 			answer.set("text", text);
 			answer.set("name", name);
 			answer.set("email", email);
-
+			// saving
 			answer.save(null, {
 			  success: function(answer) {
 				$('button').prop('disabled', true);
-				$(".send2parse").html('Ihre Daten wurden übermittelt.');
+				$(".send2parse").html('Form data sent.');
 			  },
 			  error: function(answer, error) {
-				alert("Ein Fehler ist aufgetreten. Bitte versuchen Sie später noch einmal.");
+				alert("An error occurred, please try again.");
+				$(".send2parse").html('Submit');
 			  }
 			});
-
 		}
-		
 	});
-}); 
-	    
+});     

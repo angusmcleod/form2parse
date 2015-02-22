@@ -10,7 +10,8 @@
 	margin-top:0px;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-
+.btn-default {
+	background-image: none;
 }
+
+
