@@ -31,13 +31,20 @@ $(document).ready(function(){
 		event.preventDefault();
 
 		if ($('#survey-form').valid()) {
+			
 			// Changing button status
 			$(".send2parse").html('Submitting...');
+			
 			// initalize
+
+			// don't forget to restrict your data class at parse.com to create -> https://parse.com/docs/data#security
+			// if not everybody can get your collected data via the JavaScriptKey
 			Parse.initialize("[yourApplicationId]", "[yourJavaScriptKey]");
+			
 			// new object
 			var answer = Parse.Object.extend("answer");
 			var answer = new answer();
+			
 			// mapping form data
 			var question1 = $("input:radio[name=question1OptionsRadios]:checked").val();
 			var other = $("#other").val();
